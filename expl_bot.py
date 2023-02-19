@@ -58,7 +58,7 @@ def calc(value):
             usd=data["USD"]["15m"]*btc
             eur=data["EUR"]["15m"]*btc
 
-        print(f"{btc} {round(usd, 2)} {round(eur, 2)}")
+        #print(f"{btc} {round(usd, 2)} {round(eur, 2)}")
         rate={"btc":btc, "usd":round(usd, 2), "eur":round(eur, 2)}
     except: 
         rate={"btc":btc, "usd":"error", "eur":"error"}
@@ -123,7 +123,7 @@ To change your current wallets use the following commands:
 
             """
             
-        print(wallets)
+        #print(wallets)
         return msg
     except: return "Bad command, type 'help'"
 
