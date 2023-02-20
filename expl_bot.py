@@ -80,7 +80,7 @@ def explorer(txid):
                 for key, value in wallets.items():
                     if data["out"][i]["addr"] == value:
                         rate=calc(data['out'][i]['value']) or {}
-                        message+= f"{key}:moneybag:\n{txid}\n\n{rate['btc']}\n:dollar: {rate['usd']}   :euro: {rate['eur']} \n{timetx}\n--------\n"
+                        message+= f"{key}\n{txid}\n\n{rate['btc']}\n$ {rate['usd']}\n{timetx}\n----------------\n"
             if message == "": message = f"{txid}\nNot our transaction or old wallet! :dotted_line_face:\n\n"
             return message
 
@@ -113,7 +113,7 @@ To find transaction info for your current wallet, just send me the hash.
 
 To change your current wallets use the following commands:
     :arrows_counterclockwise: For update actual wallet or add new, use command:
-        :cmd uplate "wallet_name" "wallet"
+        :cmd update "wallet_name" "wallet"
 
     :negative_squared_cross_mark: For delete wallet from list, use command:
         :cmd delete "wallet_name"
